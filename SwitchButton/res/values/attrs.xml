@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="switchButton">
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="textArray" format="string" />
+        <attr name="shapeCenter" format="color|reference" />
+        <attr name="shapeLeft" format="color|reference" />
+        <attr name="shapeRight" format="color|reference" />
+        <attr name="switchCount" format="integer" />
+        <attr name="switchStyle" format="reference" />
+    </declare-styleable>
+
+</resources>
