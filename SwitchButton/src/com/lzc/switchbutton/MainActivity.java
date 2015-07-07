@@ -28,15 +28,23 @@ public class MainActivity extends Activity {
 		});
 	}
 
+	public void setSwitchButton() {
+		String[] mTexts = new String[mSwitchButton.getSwitchCount()];
+		mTexts[0] = "全部";
+		mTexts[1] = "未读";
+		mTexts[2] = "已读";
+		mSwitchButton.setTextArray(mTexts);
+		mSwitchButton.notifyDataSetChange();
+	}
+
 	public void add(View view) {
 		mSwitchButton.setSwitchCount(mSwitchButton.getSwitchCount() + 1);
 		String[] mTexts = new String[mSwitchButton.getSwitchCount()];
 		for (int i = 0; i < mSwitchButton.getSwitchCount(); i++) {
 			mTexts[i] = "" + i;
 		}
-		/** 根据实际需要赋值，文本个数必须与SwitchButton个数相同 */
 		mSwitchButton.setTextArray(mTexts);
-		mSwitchButton.initialize();
+		mSwitchButton.notifyDataSetChange();
 	}
 
 	public void reduction(View view) {
@@ -45,8 +53,7 @@ public class MainActivity extends Activity {
 		for (int i = 0; i < mSwitchButton.getSwitchCount(); i++) {
 			mTexts[i] = "" + i;
 		}
-		/** 根据实际需要赋值，文本个数必须与SwitchButton个数相同 */
 		mSwitchButton.setTextArray(mTexts);
-		mSwitchButton.initialize();
+		mSwitchButton.notifyDataSetChange();
 	}
 }
