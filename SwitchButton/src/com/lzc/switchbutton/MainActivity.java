@@ -12,9 +12,10 @@ public class MainActivity extends Activity {
 
 	SwitchButton mSwitchButton;
 
+	static Toast mToast;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		mSwitchButton = (SwitchButton) findViewById(R.id.switchButton);
@@ -22,8 +23,7 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onChange(int position) {
-				// TODO Auto-generated method stub
-				Toast.makeText(MainActivity.this, "点击了第" + position + "项目", Toast.LENGTH_SHORT).show();
+				toast(position);
 			}
 		});
 	}
@@ -55,5 +55,16 @@ public class MainActivity extends Activity {
 		}
 		mSwitchButton.setTextArray(mTexts);
 		mSwitchButton.notifyDataSetChange();
+	}
+
+	private void toast(int position) {
+		String msg = "点击了第" + position + "项目";
+		if (mToast == null)
+			mToast = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
+		else {
+			mToast.setText(msg);
+			mToast.setDuration(Toast.LENGTH_SHORT);
+		}
+		mToast.show();
 	}
 }

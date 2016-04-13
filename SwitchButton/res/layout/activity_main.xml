@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
         android:onClick="add"
-        android:text="+"
+        android:text="@string/add"
         android:textSize="18sp" />
 
     <Button
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="25dp"
         android:onClick="reduction"
-        android:text="-"
+        android:text="@string/reduction"
         android:textSize="18sp" />
 
     <com.lzc.switchbutton.widget.SwitchButton
@@ -27,10 +27,9 @@
         android:layout_height="45dp"
         android:layout_margin="15dp"
         android:textColor="@color/switch_textcolor_selector"
-        app:shapeCenter="@drawable/switch_middle_selector"
-        app:shapeLeft="@drawable/switch_left_corner_selector"
-        app:shapeRight="@drawable/switch_right_corner_selector"
-        app:switchCount="4"
-        app:textArray="@array/test" />
+        app:sw_checkedColor="@color/green"
+        app:sw_strokeColor="@color/green"
+        app:sw_switchCount="4"
+        app:sw_textArray="@array/test" />
 
 </LinearLayout>
