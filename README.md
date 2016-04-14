@@ -1,5 +1,5 @@
 # SwitchButton
-Android仿IOS的SwitchButton
+Android仿IOS的Segmented Control
 
 如何使用：
 
