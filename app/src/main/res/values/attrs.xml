@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="switchButton">
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="sw_textArray" format="string" />
+        <attr name="sw_switchCount" format="integer" />
+        <attr name="sw_ThemeStyle" format="reference" />
+        <attr name="sw_CornerRadius" format="dimension" />
+        <attr name="sw_checkedColor" format="color|reference" />
+        <attr name="sw_unCheckedColor" format="color|reference" />
+        <attr name="sw_strokeColor" format="color|reference" />
+        <attr name="sw_strokeWidth" format="dimension" />
+    </declare-styleable>
+
+</resources>

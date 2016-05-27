@@ -14,6 +14,8 @@ Android仿IOS的Segmented Control
         app:sw_switchCount="4"
         app:sw_textArray="@array/test" />
 
+ 注：layout_width 只能固定宽度或者使用 match_parent
+		
 属性说明：
 		
 		<attr name="android:textColor" />                               //文本颜色，可以是Selector
@@ -27,4 +29,4 @@ Android仿IOS的Segmented Control
         <attr name="sw_strokeColor" format="color|reference" />           //边框颜色
         <attr name="sw_strokeWidth" format="dimension" />                 //边框粗细
 
- ![image](https://github.com/mvpleung/SwitchButton/blob/master/SwitchButton/switchbutton.gif)
+ ![image](https://github.com/mvpleung/SwitchButton/blob/master/art/switchbutton.gif)

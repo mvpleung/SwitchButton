@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string-array name="test">
-        <item>Left</item>
-        <item>Middle</item>
-        <item>Right</item>
-        <item>Other</item>
-    </string-array>
-</resources>
