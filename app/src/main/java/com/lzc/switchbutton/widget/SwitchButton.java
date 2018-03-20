@@ -28,6 +28,7 @@ import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
 import android.util.TypedValue;
@@ -122,12 +123,14 @@ public class SwitchButton extends RadioGroup implements OnCheckedChangeListener 
 		if (mParentWidth == 0)
 			return;
 		ColorDrawable colorDrawable = new ColorDrawable();
-		LayoutParams mParams = new LayoutParams(mParentWidth / (switchCount > 2 ? switchCount : (switchCount + 1)), mParentHeight, 1);
+		LayoutParams mParams = new LayoutParams(mParentWidth / (switchCount > 2 ? switchCount : (switchCount + 1)), mParentHeight, 1),
+				mFirstParams = new LayoutParams(mParentWidth / (switchCount > 2 ? switchCount : (switchCount + 1)), mParentHeight, 1);
 		for (int i = 0; i < switchCount; i++) {
 			if (mRadioArrays == null)
 				mRadioArrays = new SparseArray<RadioButton>();
 			RadioButton mRadioButton = mRadioArrays.get(i, createRadioView());
-			mRadioButton.setLayoutParams(mParams);
+			mParams.leftMargin = i > 0 ? -strokeWidth : 0;
+			mRadioButton.setLayoutParams(i == 0 ? mFirstParams : mParams);
 			mRadioButton.setButtonDrawable(mButtonDrawables != null ? mButtonDrawables.get(i, colorDrawable) : colorDrawable);
 			if (Build.VERSION.SDK_INT >= 16) {
 				mRadioButton.setBackground(getStateDrawable(i));
